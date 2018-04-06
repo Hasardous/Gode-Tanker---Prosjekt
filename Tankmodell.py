@@ -46,7 +46,7 @@ while h_1 > h_lim and t < t_lim:
   if t > 0: 
     h_1 = euler(h_1, stigning(A_hull1, A_t1, h_1, q_inn1), dt)
     v_1 = hastighet(h_1) 
-    q_inn2 = A_h1 * v_1 
+    q_inn2 = A_hull1 * v_1 
     h_2 = euler(h_2, stigning(A_hull2, A_t2, h_2, q_inn2), dt)
     v_2 = hastighet(h_2)
   
