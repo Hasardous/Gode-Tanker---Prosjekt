@@ -36,9 +36,9 @@ def stigning(A_h, A_t, h, q_inn):
 
 def hastighet(h):
   if h > 0.0:
-    retrurn k * math.sqrt(h)
+    return k * math.sqrt(h)
   else:
-    returnt 0.0
+    return 0.0
 
 # Program
 
