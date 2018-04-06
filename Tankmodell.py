@@ -7,6 +7,8 @@ import math
 
 # Variabler
 
+# Starttiden
+
 r1 = 0.135
 r2 = 0.135
 A_t1 = math.pi() * r1^2
@@ -19,13 +21,16 @@ g = 9.81
 q_inn1 = 0 #todo
 C = 0.61
 k = C * math.sqrt(2*g)
+dt = 60
+min_h = 0.01
+maks_t = 4800
 
 # Initialverdier 
 
 h_1 = 0.20
 h_2 = 0.20
 q_inn2 = 0
-
+t = 0
 # Modell
 
 def euler(h, dh, dt):
@@ -42,7 +47,11 @@ def hastighet(h):
 
 # Program
 
-while h_1 > h_lim and t < t_lim:
+t_hist = [] 
+h1_hist = [] 
+h2_hist = [] 
+
+while h_1 > min_h and t < maks_t:
   if t > 0: 
     h_1 = euler(h_1, stigning(A_hull1, A_t1, h_1, q_inn1), dt)
     v_1 = hastighet(h_1) 
