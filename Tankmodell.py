@@ -1,4 +1,4 @@
-'''Tankmodell av Gode Tanker'''
+'''Simulering av tankene i prosjektet Gode Tanker'''
 
 # Importering av nødvendige biblioteker
 
