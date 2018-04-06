@@ -1,8 +1,1 @@
-'''TODO'''
-hei
-
-ONCE UPOPN A TIME
-
-
-
-heie kfjfsølfjslkdfa
+'''Tankmodell av Gode Tanker'''
