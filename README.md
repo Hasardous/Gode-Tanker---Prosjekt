@@ -1,3 +1,3 @@
-# Gode-Tanker---Prosjekt
+# Gode-Tanker - Prosjekt
 
 Løsning til Gode Tanker.
