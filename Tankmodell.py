@@ -9,27 +9,27 @@ import math
 
 # Starttiden
 
-r1 = 0.135
-r2 = 0.135
-A_t1 = math.pi() * r1^2
-A_t2 = math.pi() * r2^2
-max_h1 = 0.25
-max_h2 = 0.25
-A_hull1 = 0 #todo
-A_hull2 = 0 #todo
-g = 9.81  
-q_inn1 = 0 #todo
+r_1 = 0.135
+r_2 = 0.135
+A_T1 = math.pi() * r_1^2
+A_T2 = math.pi() * r_2^2
+MAX_H1 = 0.25
+MAX_H2 = 0.25
+A_HULL1 = 0 #todo
+A_HULL2 = 0 #todo
+g = 9.81
+q_inn_1 = 0 #todo
 C = 0.61
 k = C * math.sqrt(2*g)
 dt = 60
-min_h = 0.01
-maks_t = 4800
+MIN_H = 0.01
+MAX_t = 4800
 
-# Initialverdier 
+# Initialverdier
 
 h_1 = 0.20
 h_2 = 0.20
-q_inn2 = 0
+q_inn_2 = 0
 t = 0
 # Modell
 
@@ -47,32 +47,30 @@ def hastighet(h):
 
 # Program
 
-t_hist = [] 
-h1_hist = [] 
-h2_hist = [] 
+t_hist = []
+H1_HIST = []
+H2_HIST = []
 
-while h_1 > min_h and t < maks_t:
-  if t > 0: 
-    h_1 = euler(h_1, stigning(A_hull1, A_t1, h_1, q_inn1), dt)
+while h_1 > MIN_H and t < MAX_t:
+  if t > 0:
+    h_1 = euler(h_1, stigning(A_HULL1, A_T1, h_1, q_inn_1), dt)
     v_1 = hastighet(h_1) 
-    q_inn2 = A_hull1 * v_1 
-    h_2 = euler(h_2, stigning(A_hull2, A_t2, h_2, q_inn2), dt)
+    q_inn_2 = A_HULL1 * v_1 
+    h_2 = euler(h_2, stigning(A_HULL2, A_T2, h_2, q_inn_2), dt)
     v_2 = hastighet(h_2)
   
-  # print("t = {} => h_1 = {} \t q_inn1 = {} \t h_2 = {} \t q_inn2 = {}".format(t, round(h_1,2), q_inn1, round(h_2,2), round(q_inn2,4)))
+  # print("t = {} => h_1 = {} \t q_inn_1 = {} \t h_2 = {} \t q_inn_2 = {}".format(t, round(h_1,2), q_inn_1, round(h_2,2), round(q_inn_2,4)))
   t_hist.append(t)
-  h1_hist.append(h_1)
-  h2_hist.append(h_2)
+  H1_HIST.append(h_1)
+  H2_HIST.append(h_2)
   t += dt
 
 # Plotting
 
-plt.plot(t_hist, h1_hist)
-plt.plot(t_hist, h2_hist)
+plt.plot(t_hist, H1_HIST)
+plt.plot(t_hist, H2_HIST)
 plt.ylabel('Høyde [m]')
 plt.xlabel('Tid [s]')
-plt.axis([0, t_lim, min(h1_hist)*0.9, max(h1_hist)*1.1])
+plt.axis([0, t_lim, min(H1_HIST)*0.9, max(H1_HIST)*1.1])
 plt.grid()
 plt.show()
-    
-    
