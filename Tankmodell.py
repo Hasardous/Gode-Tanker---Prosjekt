@@ -36,8 +36,8 @@ t = 0
 def euler(h, d_h, d_t):
   return h + d_h * d_t
 
-def stigning(A_h, A_t, h, q_inn):
-  return 1/A_t * (q_inn - A_h * k * math.sqrt(h))
+def stigning(a_h, a_t, h, q_inn):
+  return 1/a_t * (q_inn - a_h * k * math.sqrt(h))
 
 def hastighet(h):
   if h > 0.0:
