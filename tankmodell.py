@@ -36,9 +36,9 @@ def euler(h, d_h, delta_t):
   '''Kjører Eulers metode'''
   return h + d_h * delta_t
 
-def stigning(a_h, a_t, h, q_inn):
+def stigning(A_h, A_t, h, q_inn):
   '''Regner ut stigningstallet fra modellen'''
-  return 1/a_t * (q_inn - a_h * k * math.sqrt(h))
+  return 1/A_t * (q_inn - A_h * k * math.sqrt(h))
 
 def hastighet(h):
   '''Regner ut hastigheten til q_ut'''
