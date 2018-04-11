@@ -12,7 +12,6 @@ pygame.init()
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 BLUE = (0, 105, 148)
-SEA_BLUE = (0,105,148)
 
 # Definerer Vinduet og noen posisjoner
 SIZE = WIDTH, HEIGHT = 640, 480
@@ -26,42 +25,23 @@ timer = pygame.time.Clock()
 timer_text = pygame.font.SysFont('Consolas', 30)
 
 # Tankenes parametre i et dictionary
-tank_1_fill_params = {
-  "LEFT":
-  "TOP":
-  "WIDTH":
-  "HEIGHT":
-  "FILL_COLOUR":
-  "OUTLINE_COLOUR":
-  "BORDER_WIDTH":
+# TODO HAR IKKE NOEN REELLE TALL
+tank_1_params = {
+  "LEFT": CENTER_HORIZONTAL - 25,
+  "TOP": CENTER_VERTICAL - 25,
+  "WIDTH": 150,
+  "HEIGHT": 250,
+  "FILL_COLOUR": BLUE,
+  "OUTLINE_COLOUR": WHITE,
+  "BORDER_WIDTH": 3
 }
 
-tank_1_outline_params = {
-  "LEFT":
-  "TOP":
-  "WIDTH":
-  "HEIGHT":
-  "FILL_COLOUR":
-  "OUTLINE_COLOUR":
-  "BORDER_WIDTH":
-}
-
-tank_2_fill_params = {
-  "LEFT":
-  "TOP":
-  "WIDTH":
-  "HEIGHT":
-  "FILL_COLOUR":
-  "OUTLINE_COLOUR":
-  "BORDER_WIDTH":
-}
-
-tank_2_outline_params = {
-  "LEFT":
-  "TOP":
-  "WIDTH":
-  "HEIGHT":
-  "FILL_COLOUR":
-  "OUTLINE_COLOUR":
-  "BORDER_WIDTH":
+tank_2_params = {
+  "LEFT": CENTER_HORIZONTAL + 50,
+  "TOP": CENTER_VERTICAL + 50,
+  "WIDTH": 150,
+  "HEIGHT": 250,
+  "FILL_COLOUR": BLUE,
+  "OUTLINE_COLOUR": WHITE,
+  "BORDER_WIDTH": 3
 }
