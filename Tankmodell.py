@@ -33,12 +33,15 @@ t = 0
 # Modell
 
 def euler(h, d_h, d_t):
+  '''Kjører Eulers metode'''
   return h + d_h * d_t
 
 def stigning(a_h, a_t, h, q_inn):
+  '''Regner ut stigningstallet fra modellen'''
   return 1/a_t * (q_inn - a_h * k * math.sqrt(h))
 
 def hastighet(h):
+  '''Regner ut hastigheten til q_ut'''
   if h > 0.0:
     return k * math.sqrt(h)
   else:
