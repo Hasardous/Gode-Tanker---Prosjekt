@@ -88,7 +88,6 @@ while True:
    timer_rect = timer.get_rect()
    timer_rect.center = (CENTER_HORIZONTAL), (CENTER_VERTICAL - 175)
    screen.blit(timer, timer_rect)
-   #screen.blit(timer_font.render(timer_string, True, WHITE), (tank_1_params["LEFT"], CENTER_VERTICAL - 175))
    
    #Skjermoppdatering
    pygame.display.flip()
