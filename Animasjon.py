@@ -45,3 +45,39 @@ tank_2_params = {
   "OUTLINE_COLOUR": WHITE,
   "BORDER_WIDTH": 3
 }
+
+# TESTKJØRING
+while True:
+   for event in pygame.event.get():
+      if event.type == pygame.QUIT: sys.exit()
+   
+   # Fyll in skjermen
+   screen.fill(BLACK)
+  
+   # Tegner opp innholdet i tankene (halvfull)
+   pygame.draw.rect(screen, BLUE, 
+                    pygame.Rect(tank_1_params["LEFT"], 
+                                tank_1_params["TOP"], 
+                                tank_1_params["WIDTH"], 
+                                tank_1_params["HEIGHT"/2]))
+  
+   pygame.draw.rect(screen, BLUE, 
+                    pygame.Rect(tank_2_params["LEFT"], 
+                                tank_2_params["TOP"], 
+                                tank_2_params["WIDTH"], 
+                                tank_2_params["HEIGHT"/2]))
+  
+   # Tegner opp omrisset til tankene
+   pygame.draw.rect(screen, WHITE, 
+                    pygame.Rect(tank_1_params["LEFT"], 
+                                tank_1_params["TOP"], 
+                                tank_1_params["WIDTH"], 
+                                tank_1_params["HEIGHT"],
+                                tank_1_params["BORDER_WIDTH"]))
+  
+   pygame.draw.rect(screen, WHITE, 
+                    pygame.Rect(tank_2_params["LEFT"], 
+                                tank_2_params["TOP"], 
+                                tank_2_params["WIDTH"], 
+                                tank_2_params["HEIGHT"],
+                                tank_2_params["BORDER_WIDTH"]))
