@@ -21,7 +21,7 @@ C = 0.61
 k = C * math.sqrt(2*g)
 d_t = 60
 MIN_H = 0.01
-MAX_t = 4800
+max_t = 4800
 
 # Initialverdier
 
@@ -73,6 +73,6 @@ plt.plot(t_hist, H1_HIST)
 plt.plot(t_hist, H2_HIST)
 plt.ylabel('Høyde [m]')
 plt.xlabel('Tid [s]')
-plt.axis([0, MAX_t, min(H1_HIST)*0.9, max(H1_HIST)*1.1])
+plt.axis([0, max_t, min(H1_HIST)*0.9, max(H1_HIST)*1.1])
 plt.grid()
 plt.show()
