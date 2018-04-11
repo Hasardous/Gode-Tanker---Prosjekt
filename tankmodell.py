@@ -9,8 +9,8 @@ import math
 
 r_1 = 0.135
 r_2 = 0.135
-A_T1 = math.pi() * r_1^2
-A_T2 = math.pi() * r_2^2
+A_T1 = math.pi() * r_1**2
+A_T2 = math.pi() * r_2**2
 max_h1 = 0.25
 max_h2 = 0.25
 A_hull1 = 0 #todo
