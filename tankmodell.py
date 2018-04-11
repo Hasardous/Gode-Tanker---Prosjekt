@@ -7,26 +7,26 @@ import math
 
 # Variabler
 
-r_1 = 0.135
-r_2 = 0.135
-A_T1 = math.pi * r_1**2
-A_T2 = math.pi * r_2**2
-max_h1 = 0.25
-max_h2 = 0.25
-A_hull1 = 0 #todo
-A_hull2 = 0 #todo
+r_1 = 13.5 # todo
+r_2 = 13.5 # todo
+A_T1 = math.pi * r_1 ** 2
+A_T2 = math.pi * r_2 ** 2
+max_h1 = 25 # todo
+max_h2 = 25 # todo
+A_hull1 = 25 #todo
+A_hull2 = 21 #todo
 g = 9.81
-q_inn_1 = 0 #todo
+q_inn_1 = 192 #todo
 C = 0.61
 k = C * math.sqrt(2*g)
-d_t = 60
-min_h = 0.01
-max_t = 4800
+d_t = 0.01
+min_h = 0.001
+max_t = 480
 
 # Initialverdier
 
-h_1 = 0.20
-h_2 = 0.20
+h_1 = 20 # todo
+h_2 = 20 # todo
 q_inn_2 = 0.0
 t = 0
 
@@ -53,7 +53,7 @@ t_hist = []
 h1_hist = []
 h2_hist = []
 
-while h_1 > min_h and t < max_t:
+while h_1 > min_h and h_2 > min_h and t < max_t and h_1 < max_h1 and h_2 < max_h2:
   if t > 0:
     h_1 = euler(h_1, stigning(A_hull1, A_T1, h_1, q_inn_1), d_t)
     v_1 = hastighet(h_1)
@@ -73,6 +73,6 @@ plt.plot(t_hist, h1_hist)
 plt.plot(t_hist, h2_hist)
 plt.ylabel('Høyde [m]')
 plt.xlabel('Tid [s]')
-plt.axis([0, max_t, min(h1_hist)*0.9, max(h1_hist)*1.1])
+plt.axis([0, max_t, 0, max(h1_hist)*1.1])
 plt.grid()
 plt.show()
