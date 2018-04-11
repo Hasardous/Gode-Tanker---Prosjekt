@@ -6,6 +6,9 @@ import matplotlib.pyplot as plt
 import math
 import animasjon
 
+# Starting og kjøring av pygame
+animasjon.run()
+
 # Variabler
 
 r_1 = 13.5 # todo
@@ -72,7 +75,8 @@ while h_1 > min_h and h_2 > min_h and t < max_t and h_1 < max_h1 and h_2 < max_h
   # Ikke designet enda (Framework)
   TANK_1 = animasjon.tank1(h_1) # Genererer tankenes parametere fra høyden
   TANK_2 = animasjon.tank2(h_2) # Kanskje integrere tankhøyden? (max_h)
-  animasjon.screen_update(tank_1, tank_2) # Oppdaterer skjermen (Hovedloop)
+  animasjon.timeUpdate(t, d_t) # En av delene
+  animasjon.screen_update(tank_1, tank_2) # Oppdaterer tankinnholdet (Ikke Hovedloop)
 
 # Plotting
 
