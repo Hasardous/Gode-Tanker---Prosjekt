@@ -7,8 +7,6 @@ import math
 
 # Variabler
 
-# Starttiden
-
 r_1 = 0.135
 r_2 = 0.135
 A_T1 = math.pi() * r_1^2
@@ -31,6 +29,7 @@ h_1 = 0.20
 h_2 = 0.20
 q_inn_2 = 0
 t = 0
+
 # Modell
 
 def euler(h, d_h, d_t):
