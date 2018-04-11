@@ -19,10 +19,10 @@ screen = pygame.display.set_mode(SIZE)
 CENTER_HORIZONTAL = WIDTH // 2
 CENTER_VERTICAL = HEIGHT // 2
 
-# Timer
+# Clock og en font
 FPS = 10
-timer = pygame.time.Clock()
-timer_text = pygame.font.SysFont('Consolas', 30)
+clock = pygame.time.Clock()
+timer_font = pygame.font.SysFont('Consolas', 30)
 
 # Tankenes parametre i et dictionary
 # TODO HAR IKKE NOEN REELLE TALL
@@ -54,7 +54,7 @@ while True:
    # Fyll in skjermen
    screen.fill(BLACK)
   
-   # Tegner opp innholdet i tankene (halvfull)
+   # Tegner opp innholdet i tankene (konstant halvfull)
    pygame.draw.rect(screen, BLUE, 
                     pygame.Rect(tank_1_params["LEFT"], 
                                 tank_1_params["TOP"] + tank_1_params["HEIGHT"]/2, 
@@ -81,5 +81,15 @@ while True:
                                 tank_2_params["WIDTH"], 
                                 tank_2_params["HEIGHT"]),
                                 tank_2_params["BORDER_WIDTH"])
+   
+   #Timer på toppen
+   timer_string = "Runtime: {} seconds".format(round(pygame.time.get_ticks() / 1000, 1))
+   timer = timer_font.render(timer_string, True, WHITE)
+   timer_rect = timer.get_rect()
+   timer_rect.center = (CENTER_HORIZONTAL), (CENTER_VERTICAL - 175)
+   screen.blit(timer, timer_rect)
+   #screen.blit(timer_font.render(timer_string, True, WHITE), (tank_1_params["LEFT"], CENTER_VERTICAL - 175))
+   
+   #Skjermoppdatering
    pygame.display.flip()
-   timer.tick(FPS)
+   clock.tick(FPS)
