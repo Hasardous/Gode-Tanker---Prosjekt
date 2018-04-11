@@ -5,7 +5,7 @@ Matematisk modellering handler om å lage modeller, som simulerer virkeligheten 
 
 Her er et eksempel på en modell for en eksponentiell vekstrate:
 
-![Populasjonsvekst](https://github.com/Hasardous/Gode-Tanker-Prosjekt/blob/master/populasjonsvekst.PNG)
+![Populasjonsvekst](https://github.com/Hasardous/Gode-Tanker-Prosjekt/blob/master/Formler/populasjonsvekst.PNG)
 
 Her er et eksempel på en modell som prøver å representere virkeligheten (Newtons Avkjølingslov)
 
