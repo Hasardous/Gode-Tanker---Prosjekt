@@ -1,6 +1,6 @@
 # Gode-Tanker - Prosjekt
 
-Løsning til Gode Tanker.
+Løsning til prosjektoppgaven Gode Tanker i faget Programmering og Modellering.
 
 Innlevering | Fil
 ----------- | --------
