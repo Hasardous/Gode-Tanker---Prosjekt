@@ -27,7 +27,7 @@ timer_text = pygame.font.SysFont('Consolas', 30)
 # Tankenes parametre i et dictionary
 # TODO HAR IKKE NOEN REELLE TALL
 tank_1_params = {
-  "LEFT": CENTER_HORIZONTAL - 150,
+  "LEFT": CENTER_HORIZONTAL - 100,
   "TOP": CENTER_VERTICAL + 50,
   "WIDTH": 150,
   "HEIGHT": 250,
@@ -37,7 +37,7 @@ tank_1_params = {
 }
 
 tank_2_params = {
-  "LEFT": CENTER_HORIZONTAL,
+  "LEFT": CENTER_HORIZONTAL + 50,
   "TOP": CENTER_VERTICAL + 50,
   "WIDTH": 150,
   "HEIGHT": 250,
