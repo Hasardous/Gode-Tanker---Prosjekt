@@ -59,13 +59,13 @@ while True:
                     pygame.Rect(tank_1_params["LEFT"], 
                                 tank_1_params["TOP"], 
                                 tank_1_params["WIDTH"], 
-                                tank_1_params["HEIGHT"/2]))
+                                tank_1_params["HEIGHT"]/2))
   
    pygame.draw.rect(screen, BLUE, 
                     pygame.Rect(tank_2_params["LEFT"], 
                                 tank_2_params["TOP"], 
                                 tank_2_params["WIDTH"], 
-                                tank_2_params["HEIGHT"/2]))
+                                tank_2_params["HEIGHT"]/2))
   
    # Tegner opp omrisset til tankene
    pygame.draw.rect(screen, WHITE, 
