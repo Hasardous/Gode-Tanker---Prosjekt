@@ -4,6 +4,7 @@
 
 import matplotlib.pyplot as plt
 import math
+import animasjon
 
 # Variabler
 
