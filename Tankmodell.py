@@ -53,11 +53,11 @@ H2_HIST = []
 while h_1 > MIN_H and t < MAX_t:
   if t > 0:
     h_1 = euler(h_1, stigning(A_HULL1, A_T1, h_1, q_inn_1), d_t)
-    v_1 = hastighet(h_1) 
-    q_inn_2 = A_HULL1 * v_1 
+    v_1 = hastighet(h_1)
+    q_inn_2 = A_HULL1 * v_1
     h_2 = euler(h_2, stigning(A_HULL2, A_T2, h_2, q_inn_2), d_t)
     v_2 = hastighet(h_2)
-  
+    
   # print("t = {} => h_1 = {} \t q_inn_1 = {} \t h_2 = {} \t q_inn_2 = {}".format(t, round(h_1,2), q_inn_1, round(h_2,2), round(q_inn_2,4)))
   t_hist.append(t)
   H1_HIST.append(h_1)
