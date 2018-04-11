@@ -27,8 +27,8 @@ timer_text = pygame.font.SysFont('Consolas', 30)
 # Tankenes parametre i et dictionary
 # TODO HAR IKKE NOEN REELLE TALL
 tank_1_params = {
-  "LEFT": CENTER_HORIZONTAL - 150,
-  "TOP": CENTER_VERTICAL + 50,
+  "LEFT": CENTER_HORIZONTAL - 175,
+  "TOP": CENTER_VERTICAL - 125,
   "WIDTH": 150,
   "HEIGHT": 250,
   "FILL_COLOUR": BLUE,
@@ -37,8 +37,8 @@ tank_1_params = {
 }
 
 tank_2_params = {
-  "LEFT": CENTER_HORIZONTAL,
-  "TOP": CENTER_VERTICAL + 50,
+  "LEFT": CENTER_HORIZONTAL + 25,
+  "TOP": CENTER_VERTICAL - 125,
   "WIDTH": 150,
   "HEIGHT": 250,
   "FILL_COLOUR": BLUE,
@@ -57,13 +57,13 @@ while True:
    # Tegner opp innholdet i tankene (halvfull)
    pygame.draw.rect(screen, BLUE, 
                     pygame.Rect(tank_1_params["LEFT"], 
-                                tank_1_params["TOP"] - tank_1_params["HEIGHT"], 
+                                tank_1_params["TOP"] + tank_1_params["HEIGHT"]/2, 
                                 tank_1_params["WIDTH"], 
                                 tank_1_params["HEIGHT"]/2))
   
    pygame.draw.rect(screen, BLUE, 
                     pygame.Rect(tank_2_params["LEFT"], 
-                                tank_2_params["TOP"] - tank_2_params["HEIGHT"], 
+                                tank_2_params["TOP"] + tank_2_params["HEIGHT"]/2, 
                                 tank_2_params["WIDTH"], 
                                 tank_2_params["HEIGHT"]/2))
   
