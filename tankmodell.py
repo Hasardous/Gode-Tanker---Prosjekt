@@ -67,6 +67,11 @@ while h_1 > min_h and h_2 > min_h and t < max_t and h_1 < max_h1 and h_2 < max_h
   h1_hist.append(h_1)
   h2_hist.append(h_2)
   t += d_t
+  
+  #Animasjon
+  TANK_1 = animasjon.tank1(h_1)
+  TANK_2 = animasjon.tank2(h_2)
+  animasjon.screen_update()
 
 # Plotting
 
