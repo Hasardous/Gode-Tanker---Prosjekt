@@ -1,6 +1,6 @@
 '''Animasjon av vanntankene i prosjektet Gode tanker'''
 
-#Importerer nødvendige biblioteker
+# Importerer nødvendige biblioteker
 
 import sys
 import pygame
