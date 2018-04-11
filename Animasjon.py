@@ -1,5 +1,5 @@
 '''Animasjon av vanntankene i prosjektet Gode tanker'''
-
+# TODO - Konverter mye til funksjoner som kan kjøres sammen med tankmodell.py
 # Importerer nødvendige biblioteker
 
 import sys
