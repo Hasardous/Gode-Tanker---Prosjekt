@@ -5,7 +5,7 @@
 import sys
 import pygame
 
-#Starter opp PyGame
+# Starter opp PyGame
 pygame.init()
 
 BLACK = (0, 0, 0)
