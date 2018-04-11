@@ -81,3 +81,5 @@ while True:
                                 tank_2_params["WIDTH"], 
                                 tank_2_params["HEIGHT"]),
                                 tank_2_params["BORDER_WIDTH"])
+  pygame.display.flip()
+      timer.tick(FPS)
