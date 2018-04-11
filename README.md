@@ -1,4 +1,4 @@
-# Gode-Tanker - Prosjekt
+## Gode Tanker - Løsning til Prosjektoppgave
 
 Løsning til prosjektoppgaven Gode Tanker i faget Programmering og Modellering.
 
