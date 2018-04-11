@@ -11,5 +11,5 @@ pygame.init()
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 BLUE = (0, 105, 148)
-
+SEA_BLUE = (0,105,148)
 
