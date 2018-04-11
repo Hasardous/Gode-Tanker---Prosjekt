@@ -72,12 +72,12 @@ while True:
                     pygame.Rect(tank_1_params["LEFT"], 
                                 tank_1_params["TOP"], 
                                 tank_1_params["WIDTH"], 
-                                tank_1_params["HEIGHT"],
-                                tank_1_params["BORDER_WIDTH"]))
+                                tank_1_params["HEIGHT"]),
+                                tank_1_params["BORDER_WIDTH"])
   
    pygame.draw.rect(screen, WHITE, 
                     pygame.Rect(tank_2_params["LEFT"], 
                                 tank_2_params["TOP"], 
                                 tank_2_params["WIDTH"], 
-                                tank_2_params["HEIGHT"],
-                                tank_2_params["BORDER_WIDTH"]))
+                                tank_2_params["HEIGHT"]),
+                                tank_2_params["BORDER_WIDTH"])
