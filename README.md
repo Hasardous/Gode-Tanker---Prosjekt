@@ -2,9 +2,9 @@
 
 Løsning til prosjektoppgaven Gode Tanker i faget Programmering og Modellering.
 
-Innlevering | Fil | Current Branch
------------ | -------- | --------
-En kort introduksjon til matematiske modeller | MatematiskeModeller.md | master
-Animasjon | Animasjon.py | Anim-Hasardous
-Simulering | Tankmodell.py | master
-Video | |
+Innlevering | Fil
+----------- | --------
+En kort introduksjon til matematiske modeller | MatematiskeModeller.md
+Animasjon | Animasjon.py
+Simulering | tankmodell.py
+Video |
