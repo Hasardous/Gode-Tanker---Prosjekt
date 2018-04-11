@@ -25,3 +25,43 @@ FPS = 10
 timer = pygame.time.Clock()
 timer_text = pygame.font.SysFont('Consolas', 30)
 
+# Tankenes parametre i et dictionary
+tank_1_fill_params = {
+  "LEFT":
+  "TOP":
+  "WIDTH":
+  "HEIGHT":
+  "FILL_COLOUR":
+  "OUTLINE_COLOUR":
+  "BORDER_WIDTH":
+}
+
+tank_1_outline_params = {
+  "LEFT":
+  "TOP":
+  "WIDTH":
+  "HEIGHT":
+  "FILL_COLOUR":
+  "OUTLINE_COLOUR":
+  "BORDER_WIDTH":
+}
+
+tank_2_fill_params = {
+  "LEFT":
+  "TOP":
+  "WIDTH":
+  "HEIGHT":
+  "FILL_COLOUR":
+  "OUTLINE_COLOUR":
+  "BORDER_WIDTH":
+}
+
+tank_2_outline_params = {
+  "LEFT":
+  "TOP":
+  "WIDTH":
+  "HEIGHT":
+  "FILL_COLOUR":
+  "OUTLINE_COLOUR":
+  "BORDER_WIDTH":
+}
