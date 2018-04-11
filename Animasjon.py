@@ -26,6 +26,9 @@ timer_font = pygame.font.SysFont('Consolas', 30)
 
 # Tankenes parametre i et dictionary
 # TODO HAR IKKE NOEN REELLE TALL
+# Må kunne endre på helst én param for å forandre høyden
+# Level? Krever også endring lenger ned i draw.rect()
+# Disse må genereres i en funksjon som kan kjøres fra tankmodell.py
 tank_1_params = {
     "LEFT": CENTER_HORIZONTAL - 175,
     "TOP": CENTER_VERTICAL - 125,
@@ -47,6 +50,13 @@ tank_2_params = {
 }
 
 # TESTKJØRING
+# Må Konverteres til en funksjon
+# Tar imot tank_params dictionaries
+# Oppdaterer skjermen for hvert nye tall den mottar (aka hver gang den kjøres)
+# Splittes i to?
+# En som kjører hele tiden i tankmodell.py
+# Og en som oppdateres med nye tall
+# system.sleep() kan være lurt (tankmodell.py) 
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -56,6 +66,7 @@ while True:
     screen.fill(BLACK)
 
     # Tegner opp innholdet i tankene (konstant halvfull)
+    # Må være i den dyamiske delen
     pygame.draw.rect(screen, BLUE,
                      pygame.Rect(tank_1_params["LEFT"],
                                  tank_1_params["TOP"] + tank_1_params["HEIGHT"]/2,
@@ -69,6 +80,7 @@ while True:
                                  tank_2_params["HEIGHT"]/2))
 
     # Tegner opp omrisset til tankene
+    # Kan være i den konstante delen av funksjonen
     pygame.draw.rect(screen, WHITE,
                      pygame.Rect(tank_1_params["LEFT"],
                                  tank_1_params["TOP"],
@@ -84,6 +96,8 @@ while True:
                      tank_2_params["BORDER_WIDTH"])
 
     #Timer på toppen
+    #Timer_string må forandres
+    #Trenger t fra tankmodell.py
     timer_string = "Runtime: {} seconds".format(round(pygame.time.get_ticks() / 1000, 1))
     timer = timer_font.render(timer_string, True, WHITE)
     timer_rect = timer.get_rect()
