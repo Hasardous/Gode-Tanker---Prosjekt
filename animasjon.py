@@ -13,7 +13,7 @@ WHITE = (255, 255, 255)
 BLUE = (0, 105, 148)
 
 # Definerer Vinduet og noen posisjoner
-SIZE = WIDTH, HEIGHT = 640, 480
+SIZE = WIDTH, HEIGHT = 640, 380
 CENTER_HORIZONTAL = WIDTH // 2
 CENTER_VERTICAL = HEIGHT // 2
 screen = pygame.display.set_mode(SIZE)
@@ -28,7 +28,7 @@ def tank_1(level, max_height):
     '''Genererer parametre for tank 1'''
     tank_1_params = {
         "LEFT": CENTER_HORIZONTAL - 175,
-        "TOP": CENTER_VERTICAL - 125,
+        "TOP": 75,
         "WIDTH": 150,
         "HEIGHT": max_height*10,
         "FILL_COLOUR": BLUE,
@@ -42,7 +42,7 @@ def tank_2(level, max_height):
     '''Genererer parametre for tank 2'''
     tank_2_params = {
         "LEFT": CENTER_HORIZONTAL + 25,
-        "TOP": CENTER_VERTICAL - 125,
+        "TOP": 75,
         "WIDTH": 150,
         "HEIGHT": max_height*10,
         "FILL_COLOUR": BLUE,
@@ -73,7 +73,7 @@ def time_update(t):
     timer_string = "Tid: {} sekunder".format(round(t, 2))
     timer = TIMER_FONT.render(timer_string, True, WHITE)
     timer_rect = timer.get_rect()
-    timer_rect.center = (CENTER_HORIZONTAL), 75
+    timer_rect.center = (CENTER_HORIZONTAL), 50
     screen.blit(timer, timer_rect)
 
 def tank_update(tank_1_params, tank_2_params):
@@ -114,7 +114,5 @@ def tank_update(tank_1_params, tank_2_params):
 
     tank_2_name = TIMER_FONT.render("Tank 2", True, WHITE)
     tank_2_name_rect = tank_2_name.get_rect()
-    tank_2_name_x = tank_2_params["LEFT"] + (tank_2_params["WIDTH"] // 2)
-    tank_2_name_y = tank_2_params["TOP"] + tank_2_params["HEIGHT"] + 20
-    tank_2_name_rect.center = tank_2_name_x, tank_2_name_y
+    tank_2_name_rect.center = (tank_2_params["LEFT"] + (tank_2_params["WIDTH"] // 2)), (tank_2_params["TOP"] + tank_2_params["HEIGHT"]) + 20
     screen.blit(tank_2_name, tank_2_name_rect)   
