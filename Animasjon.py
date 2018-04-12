@@ -29,26 +29,33 @@ timer_font = pygame.font.SysFont('Consolas', 30)
 # Må kunne endre på helst én param for å forandre høyden
 # Level? Krever også endring lenger ned i draw.rect()
 # Disse må genereres i en funksjon som kan kjøres fra tankmodell.py
-tank_1_params = {
-    "LEFT": CENTER_HORIZONTAL - 175,
-    "TOP": CENTER_VERTICAL - 125,
-    "WIDTH": 150,
-    "HEIGHT": 250,
-    "FILL_COLOUR": BLUE,
-    "OUTLINE_COLOUR": WHITE,
-    "BORDER_WIDTH": 3
-}
+def tank_1(level, max_height):
+    '''Genererer parametre for tank 1'''
+    tank_1_params = {
+        "LEFT": CENTER_HORIZONTAL - 175,
+        "TOP": CENTER_VERTICAL - 125,
+        "WIDTH": 150,
+        "HEIGHT": max_height*10,
+        "FILL_COLOUR": BLUE,
+        "OUTLINE_COLOUR": WHITE,
+        "BORDER_WIDTH": 3,
+        "LEVEL": level*10
+    }
+    return tank_1_params
 
-tank_2_params = {
-    "LEFT": CENTER_HORIZONTAL + 25,
-    "TOP": CENTER_VERTICAL - 125,
-    "WIDTH": 150,
-    "HEIGHT": 250,
-    "FILL_COLOUR": BLUE,
-    "OUTLINE_COLOUR": WHITE,
-    "BORDER_WIDTH": 3
-}
-
+def tank_2(level, max_height):
+    '''Genererer parametre for tank 2'''
+    tank_2_params = {
+        "LEFT": CENTER_HORIZONTAL + 25,
+        "TOP": CENTER_VERTICAL - 125,
+        "WIDTH": 150,
+        "HEIGHT": max_height*10,
+        "FILL_COLOUR": BLUE,
+        "OUTLINE_COLOUR": WHITE,
+        "BORDER_WIDTH": 3,
+        "LEVEL": level*10
+    }
+    return tank_2_params
 # TESTKJØRING
 # Må Konverteres til en funksjon
 # Tar imot tank_params dictionaries
@@ -101,6 +108,7 @@ while True:
     timer_string = "Runtime: {} seconds".format(round(pygame.time.get_ticks() / 1000, 1))
     timer = timer_font.render(timer_string, True, WHITE)
     timer_rect = timer.get_rect()
+    #TODO REMEMBER Center_Vertical changes
     timer_rect.center = (CENTER_HORIZONTAL), (CENTER_VERTICAL - 175)
     screen.blit(timer, timer_rect)
 
