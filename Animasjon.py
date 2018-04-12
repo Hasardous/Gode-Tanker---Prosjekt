@@ -28,9 +28,6 @@ timer_font = pygame.font.SysFont('Consolas', 30)
 
 # Tankenes parametre i et dictionary
 # TODO HAR IKKE NOEN REELLE TALL
-# Må kunne endre på helst én param for å forandre høyden
-# Level? Krever også endring lenger ned i draw.rect()
-# Disse må genereres i en funksjon som kan kjøres fra tankmodell.py
 def tank_1(level, max_height):
     '''Genererer parametre for tank 1'''
     tank_1_params = {
@@ -58,16 +55,9 @@ def tank_2(level, max_height):
         "LEVEL": level*10
     }
     return tank_2_params
-# TESTKJØRING
-# Må Konverteres til en funksjon
-# Tar imot tank_params dictionaries
-# Oppdaterer skjermen for hvert nye tall den mottar (aka hver gang den kjøres)
-# Splittes i to?
-# En som kjører hele tiden i tankmodell.py
-# Og en som oppdateres med nye tall
-# system.sleep() kan være lurt (tankmodell.py) 
-pygame.display.flip()
-clock.tick(FPS)
+
+# TODO - Tenke på om system.sleep() kan være lurt (tankmodell.py) 
+
 
 def main_loop():
     '''Holder Pygame kjørende'''
@@ -78,15 +68,12 @@ def main_loop():
 
 def time_update(t):
     '''Genererer og oppdaterer timer på toppen av skjermen'''
-    #Timer på toppen
-    #Timer_string må forandres
-    #Trenger t fra tankmodell.py
-    #TODO Konverter til funksjon time_update(t eller d_t)
     timer_string = "Tid: {} sekunder".format(t)
     timer = timer_font.render(timer_string, True, WHITE)
     timer_rect = timer.get_rect()
     timer_rect.center = (CENTER_HORIZONTAL), 75
     screen.blit(timer, timer_rect)
+    pygame.display.flip()
 
 def screen_update(tank_1_params, tank_2_params):
     # Tegner opp omrisset til tankene
@@ -107,12 +94,16 @@ def screen_update(tank_1_params, tank_2_params):
     # Tegner opp innholdet i tankene
     pygame.draw.rect(screen, BLUE,
                      pygame.Rect(tank_1_params["LEFT"],
-                                 tank_1_params["TOP"] + tank_1_params["HEIGHT"]/2,
+                                 tank_1_params["TOP"] + tank_1_params["LEVEL"],
                                  tank_1_params["WIDTH"],
-                                 tank_1_params["HEIGHT"]/2))
+                                 tank_1_params["LEVEL"]))
 
     pygame.draw.rect(screen, BLUE,
                      pygame.Rect(tank_2_params["LEFT"],
-                                 tank_2_params["TOP"] + tank_2_params["HEIGHT"]/2,
+                                 tank_2_params["TOP"] + tank_2_params["LEVEL"],
                                  tank_2_params["WIDTH"],
-                                 tank_2_params["HEIGHT"]/2))
+                                 tank_2_params["LEVEL"]))
+
+    # Oppdaterer skjermen (clock.tick er jeg usikker på)
+    pygame.display.flip()
+    clock.tick(FPS)
