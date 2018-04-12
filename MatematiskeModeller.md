@@ -10,3 +10,5 @@ Her er et eksempel på en modell for en eksponentiell vekstrate:
 Her er et mer spesifikt eksempel (Newtons Avkjølingslov)
 
 ![Law of Cooling](https://github.com/Hasardous/Gode-Tanker-Prosjekt/blob/master/Formler/lawofcooling2.PNG)
+
+![Law of Cooling](https://github.com/Hasardous/Gode-Tanker-Prosjekt/blob/master/Formler/lawofcooling1.PNG)
