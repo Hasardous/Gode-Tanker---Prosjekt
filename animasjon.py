@@ -21,7 +21,7 @@ screen = pygame.display.set_mode(SIZE)
 # Clock og en font
 FPS = 60
 clock = pygame.time.Clock()
-timer_font = pygame.font.SysFont('Consolas', 30)
+TIMER_FONT = pygame.font.SysFont('Consolas', 30)
 
 # Tankenes parametre i et dictionary
 def tank_1(level, max_height):
@@ -52,7 +52,7 @@ def tank_2(level, max_height):
     }
     return tank_2_params
 
-def main_loop(MAX_H_1, MAX_H_2, TIME, LEVEL_1, LEVEL_2):
+def main_loop(max_h_1, max_h_2, t, level_1, level_2):
     '''Animasjon av tanker. Kjører resten av animeringen via funksjoner'''
     screen.fill(BLACK)
     #while True:
@@ -61,17 +61,17 @@ def main_loop(MAX_H_1, MAX_H_2, TIME, LEVEL_1, LEVEL_2):
         if event.type == pygame.QUIT:
             sys.exit()
 
-    t_1 = tank_1(LEVEL_1,MAX_H_1)
-    t_2 = tank_2(LEVEL_2,MAX_H_2)
-    time_update(TIME)
-    tank_update(t_1,t_2)
-    
+    t_1 = tank_1(level_1, max_h_1)
+    t_2 = tank_2(level_2, max_h_2)
+    time_update(t)
+    tank_update(t_1, t_2)
+
     pygame.display.flip()
     clock.tick(FPS)
 def time_update(t):
     '''Genererer og oppdaterer timer på toppen av skjermen'''
-    timer_string = "Tid: {} sekunder".format(round(t,2))
-    timer = timer_font.render(timer_string, True, WHITE)
+    timer_string = "Tid: {} sekunder".format(round(t, 2))
+    timer = TIMER_FONT.render(timer_string, True, WHITE)
     timer_rect = timer.get_rect()
     timer_rect.center = (CENTER_HORIZONTAL), 75
     screen.blit(timer, timer_rect)
