@@ -1,5 +1,4 @@
 '''Animasjon av vanntankene i prosjektet Gode tanker'''
-# TODO - Konverter mye til funksjoner som kan kjøres sammen med tankmodell.py
 # TODO - Dynamisk Skjermstørelse
 # Importerer nødvendige biblioteker
 
@@ -20,14 +19,12 @@ CENTER_HORIZONTAL = WIDTH // 2
 CENTER_VERTICAL = HEIGHT // 2
 screen = pygame.display.set_mode(SIZE)
 
-
 # Clock og en font
 FPS = 60
 clock = pygame.time.Clock()
 timer_font = pygame.font.SysFont('Consolas', 30)
 
 # Tankenes parametre i et dictionary
-# TODO HAR IKKE NOEN REELLE TALL
 def tank_1(level, max_height):
     '''Genererer parametre for tank 1'''
     tank_1_params = {
@@ -56,11 +53,8 @@ def tank_2(level, max_height):
     }
     return tank_2_params
 
-# TODO - Tenke på om system.sleep() kan være lurt (tankmodell.py) 
-
-
 def main_loop(MAX_H_1, MAX_H_2, TIME, LEVEL_1, LEVEL_2):
-    '''Holder Pygame kjørende'''
+    '''Animasjon av tanker. Kjører resten av animeringen via funksjoner'''
     screen.fill(BLACK)
     #while True:
     for event in pygame.event.get():
@@ -71,7 +65,7 @@ def main_loop(MAX_H_1, MAX_H_2, TIME, LEVEL_1, LEVEL_2):
     t_2 = tank_2(LEVEL_2,MAX_H_2)
     time_update(TIME)
     tank_update(t_1,t_2)
-    # Oppdaterer skjermen (clock.tick er jeg usikker på)
+    
     pygame.display.flip()
     clock.tick(FPS)
 def time_update(t):
@@ -84,8 +78,7 @@ def time_update(t):
     pygame.display.flip()
 
 def tank_update(tank_1_params, tank_2_params):
-    
-
+    '''Generer tankene basert på parameterdictionaries'''
     # Tegner opp innholdet i tankene
     pygame.draw.rect(screen, BLUE,
                      pygame.Rect(tank_1_params["LEFT"],
