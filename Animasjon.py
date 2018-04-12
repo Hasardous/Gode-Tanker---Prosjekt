@@ -22,7 +22,7 @@ screen = pygame.display.set_mode(SIZE)
 
 
 # Clock og en font
-FPS = 10
+FPS = 60
 clock = pygame.time.Clock()
 timer_font = pygame.font.SysFont('Consolas', 30)
 
@@ -76,7 +76,7 @@ def main_loop(MAX_H_1, MAX_H_2, TIME, LEVEL_1, LEVEL_2):
     clock.tick(FPS)
 def time_update(t):
     '''Genererer og oppdaterer timer på toppen av skjermen'''
-    timer_string = "Tid: {} sekunder".format(t)
+    timer_string = "Tid: {} sekunder".format(round(t,2))
     timer = timer_font.render(timer_string, True, WHITE)
     timer_rect = timer.get_rect()
     timer_rect.center = (CENTER_HORIZONTAL), 75
