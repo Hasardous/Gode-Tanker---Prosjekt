@@ -20,7 +20,7 @@ g = 9.81
 q_inn_1 = 192 #todo
 C = 0.61
 k = C * math.sqrt(2*g)
-d_t = 0.01 #Animasjonen blir ikke helt bra.. [default=0.01]
+d_t = 0.01 #TODO - d_t bestemmer farten på animasjonen. Kanskje fikse det? [default=0.01]
 min_h = 0.001
 max_t = 480
 
@@ -69,6 +69,7 @@ while h_1 > min_h and h_2 > min_h and t < max_t and h_1 < max_h1 and h_2 < max_h
   
   
   # Animasjon
+  
   animasjon.main_loop(max_h1, max_h2, t, h_1, h_2)
   
   t += d_t
