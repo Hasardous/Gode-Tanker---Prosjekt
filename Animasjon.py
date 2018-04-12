@@ -64,30 +64,47 @@ def tank_2(level, max_height):
 # En som kjører hele tiden i tankmodell.py
 # Og en som oppdateres med nye tall
 # system.sleep() kan være lurt (tankmodell.py) 
-while True:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            sys.exit()
+pygame.display.flip()
+clock.tick(FPS)
 
-    # Fyll in skjermen
-    screen.fill(BLACK)
+def main_loop():
+    while True:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                sys.exit()
 
-    # Tegner opp innholdet i tankene (konstant halvfull)
-    # Må være i den dyamiske delen
-    pygame.draw.rect(screen, BLUE,
-                     pygame.Rect(tank_1_params["LEFT"],
-                                 tank_1_params["TOP"] + tank_1_params["HEIGHT"]/2,
-                                 tank_1_params["WIDTH"],
-                                 tank_1_params["HEIGHT"]/2))
+        # Fyll in skjermen
+        screen.fill(BLACK)
 
-    pygame.draw.rect(screen, BLUE,
-                     pygame.Rect(tank_2_params["LEFT"],
-                                 tank_2_params["TOP"] + tank_2_params["HEIGHT"]/2,
-                                 tank_2_params["WIDTH"],
-                                 tank_2_params["HEIGHT"]/2))
+        # Tegner opp omrisset til tankene
+        pygame.draw.rect(screen, WHITE,
+                         pygame.Rect(tank_1_params["LEFT"],
+                                     tank_1_params["TOP"],
+                                     tank_1_params["WIDTH"],
+                                     tank_1_params["HEIGHT"]),
+                         tank_1_params["BORDER_WIDTH"])
 
+        pygame.draw.rect(screen, WHITE,
+                         pygame.Rect(tank_2_params["LEFT"],
+                                     tank_2_params["TOP"],
+                                     tank_2_params["WIDTH"],
+                                     tank_2_params["HEIGHT"]),
+                         tank_2_params["BORDER_WIDTH"])
+
+def time_update():
+    #Timer på toppen
+    #Timer_string må forandres
+    #Trenger t fra tankmodell.py
+    #TODO Konverter til funksjon time_update(t eller d_t)
+    timer_string = "Runtime: {} seconds".format(round(pygame.time.get_ticks() / 1000, 1))
+    timer = timer_font.render(timer_string, True, WHITE)
+    timer_rect = timer.get_rect()
+    #TODO REMEMBER Center_Vertical changes
+    timer_rect.center = (CENTER_HORIZONTAL), (CENTER_VERTICAL - 175)
+    screen.blit(timer, timer_rect)
+
+def screen_update(tank_1_params, tank_2_params):
     # Tegner opp omrisset til tankene
-    # Kan være i den konstante delen av funksjonen
     pygame.draw.rect(screen, WHITE,
                      pygame.Rect(tank_1_params["LEFT"],
                                  tank_1_params["TOP"],
@@ -102,16 +119,15 @@ while True:
                                  tank_2_params["HEIGHT"]),
                      tank_2_params["BORDER_WIDTH"])
 
-    #Timer på toppen
-    #Timer_string må forandres
-    #Trenger t fra tankmodell.py
-    timer_string = "Runtime: {} seconds".format(round(pygame.time.get_ticks() / 1000, 1))
-    timer = timer_font.render(timer_string, True, WHITE)
-    timer_rect = timer.get_rect()
-    #TODO REMEMBER Center_Vertical changes
-    timer_rect.center = (CENTER_HORIZONTAL), (CENTER_VERTICAL - 175)
-    screen.blit(timer, timer_rect)
+    # Tegner opp innholdet i tankene
+    pygame.draw.rect(screen, BLUE,
+                     pygame.Rect(tank_1_params["LEFT"],
+                                 tank_1_params["TOP"] + tank_1_params["HEIGHT"]/2,
+                                 tank_1_params["WIDTH"],
+                                 tank_1_params["HEIGHT"]/2))
 
-    #Skjermoppdatering
-    pygame.display.flip()
-    clock.tick(FPS)
+    pygame.draw.rect(screen, BLUE,
+                     pygame.Rect(tank_2_params["LEFT"],
+                                 tank_2_params["TOP"] + tank_2_params["HEIGHT"]/2,
+                                 tank_2_params["WIDTH"],
+                                 tank_2_params["HEIGHT"]/2))
