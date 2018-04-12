@@ -15,7 +15,6 @@ BLUE = (0, 105, 148)
 # Definerer Vinduet og noen posisjoner
 SIZE = WIDTH, HEIGHT = 640, 380
 CENTER_HORIZONTAL = WIDTH // 2
-CENTER_VERTICAL = HEIGHT // 2
 screen = pygame.display.set_mode(SIZE)
 
 # Clock og en font
