@@ -1,5 +1,5 @@
 '''Animasjon av vanntankene i prosjektet Gode tanker'''
-
+# TODO - Dynamisk Skjermstørelse
 # Importerer nødvendige biblioteker
 import sys
 import pygame
@@ -14,58 +14,84 @@ BLUE = (0, 105, 148)
 
 # Definerer Vinduet og noen posisjoner
 SIZE = WIDTH, HEIGHT = 640, 480
-screen = pygame.display.set_mode(SIZE)
 CENTER_HORIZONTAL = WIDTH // 2
 CENTER_VERTICAL = HEIGHT // 2
+screen = pygame.display.set_mode(SIZE)
 
 # Clock og en font
-FPS = 10
+FPS = 60
 clock = pygame.time.Clock()
 timer_font = pygame.font.SysFont('Consolas', 30)
 
 # Tankenes parametre i et dictionary
-# TODO HAR IKKE NOEN REELLE TALL
-tank_1_params = {
-    "LEFT": CENTER_HORIZONTAL - 175,
-    "TOP": CENTER_VERTICAL - 125,
-    "WIDTH": 150,
-    "HEIGHT": 250,
-    "FILL_COLOUR": BLUE,
-    "OUTLINE_COLOUR": WHITE,
-    "BORDER_WIDTH": 3
-}
+def tank_1(level, max_height):
+    '''Genererer parametre for tank 1'''
+    tank_1_params = {
+        "LEFT": CENTER_HORIZONTAL - 175,
+        "TOP": CENTER_VERTICAL - 125,
+        "WIDTH": 150,
+        "HEIGHT": max_height*10,
+        "FILL_COLOUR": BLUE,
+        "OUTLINE_COLOUR": WHITE,
+        "BORDER_WIDTH": 3,
+        "LEVEL": level*10
+    }
+    return tank_1_params
 
-tank_2_params = {
-    "LEFT": CENTER_HORIZONTAL + 25,
-    "TOP": CENTER_VERTICAL - 125,
-    "WIDTH": 150,
-    "HEIGHT": 250,
-    "FILL_COLOUR": BLUE,
-    "OUTLINE_COLOUR": WHITE,
-    "BORDER_WIDTH": 3
-}
+def tank_2(level, max_height):
+    '''Genererer parametre for tank 2'''
+    tank_2_params = {
+        "LEFT": CENTER_HORIZONTAL + 25,
+        "TOP": CENTER_VERTICAL - 125,
+        "WIDTH": 150,
+        "HEIGHT": max_height*10,
+        "FILL_COLOUR": BLUE,
+        "OUTLINE_COLOUR": WHITE,
+        "BORDER_WIDTH": 3,
+        "LEVEL": level*10
+    }
+    return tank_2_params
 
-# TESTKJØRING
-while True:
+def main_loop(MAX_H_1, MAX_H_2, TIME, LEVEL_1, LEVEL_2):
+    '''Animasjon av tanker. Kjører resten av animeringen via funksjoner'''
+    screen.fill(BLACK)
+    #while True:
+
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             sys.exit()
 
-    # Fyll in skjermen
-    screen.fill(BLACK)
+    t_1 = tank_1(LEVEL_1,MAX_H_1)
+    t_2 = tank_2(LEVEL_2,MAX_H_2)
+    time_update(TIME)
+    tank_update(t_1,t_2)
+    
+    pygame.display.flip()
+    clock.tick(FPS)
+def time_update(t):
+    '''Genererer og oppdaterer timer på toppen av skjermen'''
+    timer_string = "Tid: {} sekunder".format(round(t,2))
+    timer = timer_font.render(timer_string, True, WHITE)
+    timer_rect = timer.get_rect()
+    timer_rect.center = (CENTER_HORIZONTAL), 75
+    screen.blit(timer, timer_rect)
+    pygame.display.flip()
 
-    # Tegner opp innholdet i tankene (konstant halvfull)
+def tank_update(tank_1_params, tank_2_params):
+    '''Generer tankene basert på parameterdictionaries'''
+    # Tegner opp innholdet i tankene
     pygame.draw.rect(screen, BLUE,
                      pygame.Rect(tank_1_params["LEFT"],
-                                 tank_1_params["TOP"] + tank_1_params["HEIGHT"]/2,
+                                 tank_1_params["TOP"] + (tank_1_params["HEIGHT"]-tank_1_params["LEVEL"]),
                                  tank_1_params["WIDTH"],
-                                 tank_1_params["HEIGHT"]/2))
+                                 tank_1_params["LEVEL"]))
 
     pygame.draw.rect(screen, BLUE,
                      pygame.Rect(tank_2_params["LEFT"],
-                                 tank_2_params["TOP"] + tank_2_params["HEIGHT"]/2,
+                                 tank_2_params["TOP"] + (tank_2_params["HEIGHT"]-tank_2_params["LEVEL"]),
                                  tank_2_params["WIDTH"],
-                                 tank_2_params["HEIGHT"]/2))
+                                 tank_2_params["LEVEL"]))
+
 
     # Tegner opp omrisset til tankene
     pygame.draw.rect(screen, WHITE,
@@ -81,14 +107,3 @@ while True:
                                  tank_2_params["WIDTH"],
                                  tank_2_params["HEIGHT"]),
                      tank_2_params["BORDER_WIDTH"])
-
-    #Timer på toppen
-    timer_string = "Runtime: {} seconds".format(round(pygame.time.get_ticks() / 1000, 1))
-    timer = timer_font.render(timer_string, True, WHITE)
-    timer_rect = timer.get_rect()
-    timer_rect.center = (CENTER_HORIZONTAL), (CENTER_VERTICAL - 175)
-    screen.blit(timer, timer_rect)
-
-    #Skjermoppdatering
-    pygame.display.flip()
-    clock.tick(FPS)
