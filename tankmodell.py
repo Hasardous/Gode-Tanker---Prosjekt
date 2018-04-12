@@ -75,8 +75,8 @@ while h_1 > min_h and h_2 > min_h and t < max_t and h_1 < max_h1 and h_2 < max_h
   # Ikke designet enda (Framework)
   TANK_1 = animasjon.tank_1(h_1, max_h1) # Genererer tankenes parametere fra høyden
   TANK_2 = animasjon.tank_2(h_2, max_h2) # Kanskje integrere tankhøyden? (max_h)
-  animasjon.time_update(t) # tid i sekunder
-  animasjon.screen_update(tank_1, tank_2) # Oppdaterer tankinnholdet (Ikke Hovedloop)
+  animasjon.time_update(t) # tid i sekunder?
+  animasjon.screen_update(TANK_1, TANK_2) # Oppdaterer tankinnholdet (Ikke Hovedloop)
   
   t += d_t
 # Plotting
