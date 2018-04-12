@@ -75,7 +75,6 @@ def time_update(t):
     timer_rect = timer.get_rect()
     timer_rect.center = (CENTER_HORIZONTAL), 75
     screen.blit(timer, timer_rect)
-    pygame.display.flip()
 
 def tank_update(tank_1_params, tank_2_params):
     '''Generer tankene basert på parameterdictionaries'''
@@ -107,3 +106,15 @@ def tank_update(tank_1_params, tank_2_params):
                                  tank_2_params["WIDTH"],
                                  tank_2_params["HEIGHT"]),
                      tank_2_params["BORDER_WIDTH"])
+
+    tank_1_name = TIMER_FONT.render("Tank 1", True, WHITE)
+    tank_1_name_rect = tank_1_name.get_rect()
+    tank_1_name_rect.center = (tank_1_params["LEFT"] + (tank_1_params["WIDTH"] // 2)), (tank_1_params["TOP"] + tank_1_params["HEIGHT"]) + 20
+    screen.blit(tank_1_name, tank_1_name_rect)   
+
+    tank_2_name = TIMER_FONT.render("Tank 2", True, WHITE)
+    tank_2_name_rect = tank_2_name.get_rect()
+    tank_2_name_x = tank_2_params["LEFT"] + (tank_2_params["WIDTH"] // 2)
+    tank_2_name_y = tank_2_params["TOP"] + tank_2_params["HEIGHT"] + 20
+    tank_2_name_rect.center = tank_2_name_x, tank_2_name_y
+    screen.blit(tank_2_name, tank_2_name_rect)   
