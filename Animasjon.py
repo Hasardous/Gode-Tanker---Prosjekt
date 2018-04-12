@@ -1,5 +1,6 @@
 '''Animasjon av vanntankene i prosjektet Gode tanker'''
 # TODO - Konverter mye til funksjoner som kan kjøres sammen med tankmodell.py
+# TODO - Dynamisk Skjermstørelse
 # Importerer nødvendige biblioteker
 
 import sys
@@ -15,9 +16,10 @@ BLUE = (0, 105, 148)
 
 # Definerer Vinduet og noen posisjoner
 SIZE = WIDTH, HEIGHT = 640, 480
-screen = pygame.display.set_mode(SIZE)
 CENTER_HORIZONTAL = WIDTH // 2
 CENTER_VERTICAL = HEIGHT // 2
+screen = pygame.display.set_mode(SIZE)
+
 
 # Clock og en font
 FPS = 10
@@ -68,24 +70,22 @@ pygame.display.flip()
 clock.tick(FPS)
 
 def main_loop():
+    '''Holder Pygame kjørende'''
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 sys.exit()
 
-        # Fyll in skjermen
-        screen.fill(BLACK)
-
-def time_update():
+def time_update(t):
+    '''Genererer og oppdaterer timer på toppen av skjermen'''
     #Timer på toppen
     #Timer_string må forandres
     #Trenger t fra tankmodell.py
     #TODO Konverter til funksjon time_update(t eller d_t)
-    timer_string = "Runtime: {} seconds".format(round(pygame.time.get_ticks() / 1000, 1))
+    timer_string = "Tid: {} sekunder".format(t)
     timer = timer_font.render(timer_string, True, WHITE)
     timer_rect = timer.get_rect()
-    #TODO REMEMBER Center_Vertical changes
-    timer_rect.center = (CENTER_HORIZONTAL), (CENTER_VERTICAL - 175)
+    timer_rect.center = (CENTER_HORIZONTAL), 75
     screen.blit(timer, timer_rect)
 
 def screen_update(tank_1_params, tank_2_params):
