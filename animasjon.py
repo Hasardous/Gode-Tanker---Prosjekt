@@ -1,7 +1,6 @@
 '''Animasjon av vanntankene i prosjektet Gode tanker'''
 # TODO - Dynamisk Skjermstørelse
 # Importerer nødvendige biblioteker
-
 import sys
 import pygame
 
@@ -57,6 +56,7 @@ def main_loop(MAX_H_1, MAX_H_2, TIME, LEVEL_1, LEVEL_2):
     '''Animasjon av tanker. Kjører resten av animeringen via funksjoner'''
     screen.fill(BLACK)
     #while True:
+
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             sys.exit()
@@ -91,6 +91,7 @@ def tank_update(tank_1_params, tank_2_params):
                                  tank_2_params["TOP"] + (tank_2_params["HEIGHT"]-tank_2_params["LEVEL"]),
                                  tank_2_params["WIDTH"],
                                  tank_2_params["LEVEL"]))
+
 
     # Tegner opp omrisset til tankene
     pygame.draw.rect(screen, WHITE,
