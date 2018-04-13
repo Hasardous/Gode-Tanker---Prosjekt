@@ -13,9 +13,21 @@ WHITE = (255, 255, 255)
 BLUE = (0, 105, 148)
 
 # Definerer Vinduet og noen posisjoner
-SIZE = WIDTH, HEIGHT = 640, 380
-CENTER_HORIZONTAL = WIDTH // 2
-screen = pygame.display.set_mode(SIZE)
+#SIZE = WIDTH, HEIGHT = 640, 380
+#CENTER_HORIZONTAL = WIDTH // 2
+#screen = pygame.display.set_mode(SIZE)
+
+
+def screen_size(t1_h, t2_h):
+    t_h = max([t1_h*10, t2_h*10])
+    new_height = 130 + t_h
+
+    global SIZE
+    global CENTER_HORIZONTAL
+    global screen
+    SIZE = WIDTH, HEIGHT = 640, new_height
+    CENTER_HORIZONTAL = WIDTH // 2
+    screen = pygame.display.set_mode(SIZE)
 
 # Clock og en font
 FPS = 60
