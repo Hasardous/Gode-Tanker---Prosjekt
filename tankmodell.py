@@ -24,6 +24,9 @@ d_t = 0.01 #TODO - d_t bestemmer farten på animasjonen. Kanskje fikse det? [def
 min_h = 0.001
 max_t = 480
 
+# Dynamisk Skjermstørelse
+animasjon.screen_size(max_h1, max_h2)
+
 # Initialverdier
 
 h_1 = 20 # todo
@@ -75,10 +78,11 @@ while h_1 > min_h and h_2 > min_h and t < max_t and h_1 < max_h1 and h_2 < max_h
   t += d_t
 # Plotting
 
-plt.plot(t_hist, h1_hist)
-plt.plot(t_hist, h2_hist)
+plt.plot(t_hist, h1_hist, label='Tank 1')
+plt.plot(t_hist, h2_hist, label='Tank 2')
 plt.ylabel('Høyde [m]')
 plt.xlabel('Tid [s]')
 plt.axis([0, max_t, 0, max(h1_hist)*1.1])
+plt.legend()
 plt.grid()
 plt.show()
