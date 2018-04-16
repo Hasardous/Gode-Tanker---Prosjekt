@@ -1,5 +1,4 @@
 '''Animasjon av vanntankene i prosjektet Gode tanker'''
-# TODO - Dynamisk Skjermstørelse
 # Importerer nødvendige biblioteker
 import sys
 import pygame
@@ -12,13 +11,8 @@ BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 BLUE = (0, 105, 148)
 
-# Definerer Vinduet og noen posisjoner
-#SIZE = WIDTH, HEIGHT = 640, 380
-#CENTER_HORIZONTAL = WIDTH // 2
-#screen = pygame.display.set_mode(SIZE)
-
-
 def screen_size(t1_h, t2_h):
+    '''Lager skjermen basert på høyeste tank'''
     t_h = max([t1_h*10, t2_h*10])
     new_height = 130 + t_h
 
@@ -65,24 +59,29 @@ def tank_2(level, max_height):
 
 def main_loop(max_h_1, max_h_2, t, level_1, level_2):
     '''Animasjon av tanker. Kjører resten av animeringen via funksjoner'''
+    #Lager en sort skjerm
     screen.fill(BLACK)
-    #while True:
 
+    #Passer på at PyGame ikke kræsjer når du lukker den.
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             sys.exit()
 
+    #Kjører tegnefunksjonene.
     t_1 = tank_1(level_1, max_h_1)
     t_2 = tank_2(level_2, max_h_2)
     time_update(t)
     tank_update(t_1, t_2)
 
+    #Oppdaterer skjermen.
     pygame.display.flip()
     clock.tick(FPS)
+
 def time_update(t):
     '''Genererer og oppdaterer timer på toppen av skjermen'''
     timer_string = "Tid: {} sekunder".format(round(t, 2))
     timer = TIMER_FONT.render(timer_string, True, WHITE)
+    #Henter rektangelet til teksten og plasserer sentrum i definert x og y
     timer_rect = timer.get_rect()
     timer_rect.center = (CENTER_HORIZONTAL), 50
     screen.blit(timer, timer_rect)
@@ -118,7 +117,9 @@ def tank_update(tank_1_params, tank_2_params):
                                  tank_2_params["HEIGHT"]),
                      tank_2_params["BORDER_WIDTH"])
 
+    #Tegner opp navn under tankene
     tank_1_name = TIMER_FONT.render("Tank 1", True, WHITE)
+    #Henter rektangelet til teksten og plasserer sentrum i definert x og y
     tank_1_name_rect = tank_1_name.get_rect()
     tank_1_name_rect.center = (tank_1_params["LEFT"] + (tank_1_params["WIDTH"] // 2)), (tank_1_params["TOP"] + tank_1_params["HEIGHT"]) + 20
     screen.blit(tank_1_name, tank_1_name_rect)   
