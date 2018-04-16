@@ -4,6 +4,7 @@
 
 import matplotlib.pyplot as plt
 import math
+import animasjon
 
 # Variabler
 
@@ -19,9 +20,12 @@ g = 9.81
 q_inn_1 = 192 #todo
 C = 0.61
 k = C * math.sqrt(2*g)
-d_t = 0.01
+d_t = 0.01 #TODO - d_t bestemmer farten på animasjonen. Kanskje fikse det? [default=0.01]
 min_h = 0.001
 max_t = 480
+
+# Dynamisk Skjermstørelse
+animasjon.screen_size(max_h1, max_h2)
 
 # Initialverdier
 
@@ -65,14 +69,20 @@ while h_1 > min_h and h_2 > min_h and t < max_t and h_1 < max_h1 and h_2 < max_h
   t_hist.append(t)
   h1_hist.append(h_1)
   h2_hist.append(h_2)
+  
+  
+  # Animasjon
+  
+  animasjon.main_loop(max_h1, max_h2, t, h_1, h_2)
+  
   t += d_t
-
 # Plotting
 
-plt.plot(t_hist, h1_hist)
-plt.plot(t_hist, h2_hist)
+plt.plot(t_hist, h1_hist, label='Tank 1')
+plt.plot(t_hist, h2_hist, label='Tank 2')
 plt.ylabel('Høyde [m]')
 plt.xlabel('Tid [s]')
 plt.axis([0, max_t, 0, max(h1_hist)*1.1])
+plt.legend()
 plt.grid()
 plt.show()
