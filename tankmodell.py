@@ -8,19 +8,19 @@ import animasjon
 
 # Variabler
 
-r_1 = 13.5 # todo
-r_2 = 13.5 # todo
+r_1 = 13.5 #TODO
+r_2 = 13.5 #TODO
 A_T1 = math.pi * r_1 ** 2
 A_T2 = math.pi * r_2 ** 2
-max_h1 = 25 # todo
-max_h2 = 25 # todo
-A_hull1 = 25 #todo
-A_hull2 = 21 #todo
+max_h1 = 25 #TODO
+max_h2 = 25 #TODO
+A_hull1 = 25 #TODO
+A_hull2 = 21 #TODO
 g = 9.81
 q_inn_1 = 192 #todo
 C = 0.61
 k = C * math.sqrt(2*g)
-d_t = 0.01 #TODO - d_t bestemmer farten på animasjonen. Kanskje fikse det? [default=0.01]
+d_t = 0.1 #TODO - d_t bestemmer farten på animasjonen. Kanskje fikse det? [default=0.01]
 min_h = 0.001
 max_t = 480
 
