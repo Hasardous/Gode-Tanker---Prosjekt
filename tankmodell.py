@@ -29,8 +29,8 @@ animasjon.screen_size(max_h1, max_h2)
 
 # Initialverdier
 
-h_1 = 20 # todo
-h_2 = 20 # todo
+h_1 = 20 #TODO
+h_2 = 20 #TODO
 q_inn_2 = 0.0
 t = 0
 
