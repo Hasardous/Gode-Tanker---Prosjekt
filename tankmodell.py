@@ -8,29 +8,29 @@ import animasjon
 
 # Variabler
 
-r_1 = 13.5 #TODO
-r_2 = 13.5 #TODO
-A_T1 = math.pi * r_1 ** 2
-A_T2 = math.pi * r_2 ** 2
-max_h1 = 25 #TODO
-max_h2 = 25 #TODO
-A_hull1 = 25 #TODO
-A_hull2 = 21 #TODO
+r_1 = 0.11825
+r_2 = 0.11825
+A_T1 = 0.0439
+A_T2 = 0.0439
+max_h1 = 0.265 
+max_h2 = 0.265
+A_hull1 = math.pi * 0.005 **2
+A_hull2 = math.pi * 0.005 **2
 g = 9.81
-q_inn_1 = 192 #todo
-C = 0.61
+q_inn_1 = 0.000107 #TODO Få faktisk verdi. Dummyverdi
+C = 0.50 #TODO Default 0.61 
 k = C * math.sqrt(2*g)
-d_t = 0.1 #TODO - d_t bestemmer farten på animasjonen. Kanskje fikse det? [default=0.01]
+d_t = 1 #[default=0.01 eller 0.1]
 min_h = 0.001
-max_t = 480
+max_t = 1000 #480
 
 # Dynamisk Skjermstørelse
 animasjon.screen_size(max_h1, max_h2)
 
 # Initialverdier
 
-h_1 = 20 #TODO
-h_2 = 20 #TODO
+h_1 = 0.15 #TODO
+h_2 = 0.10 #TODO
 q_inn_2 = 0.0
 t = 0
 
@@ -82,7 +82,7 @@ plt.plot(t_hist, h1_hist, label='Tank 1')
 plt.plot(t_hist, h2_hist, label='Tank 2')
 plt.ylabel('Høyde [m]')
 plt.xlabel('Tid [s]')
-plt.axis([0, max_t, 0, max(h1_hist)*1.1])
+plt.axis([0, max_t, 0, 0.30])
 plt.legend()
 plt.grid()
 plt.show()
