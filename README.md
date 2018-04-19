@@ -8,3 +8,4 @@ En kort introduksjon til matematiske modeller | MatematiskeModeller.md
 Animasjon | animasjon.py
 Simulering | tankmodell.py
 Video |
+Dokumetasjonsnotebook | Dokumentasjon av Gode Tanker.ipynb
