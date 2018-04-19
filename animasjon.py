@@ -13,8 +13,8 @@ BLUE = (0, 105, 148)
 
 def screen_size(t1_h, t2_h):
     '''Lager skjermen basert på høyeste tank'''
-    t_h = max([t1_h*10, t2_h*10])
-    new_height = 130 + t_h
+    t_h = max([t1_h*1000, t2_h*1000])
+    new_height = 130 + int(t_h)
 
     global SIZE
     global CENTER_HORIZONTAL
@@ -35,11 +35,11 @@ def tank_1(level, max_height):
         "LEFT": CENTER_HORIZONTAL - 175,
         "TOP": 75,
         "WIDTH": 150,
-        "HEIGHT": max_height*10,
+        "HEIGHT": max_height*1000,
         "FILL_COLOUR": BLUE,
         "OUTLINE_COLOUR": WHITE,
         "BORDER_WIDTH": 3,
-        "LEVEL": level*10
+        "LEVEL": level*1000
     }
     return tank_1_params
 
@@ -49,11 +49,11 @@ def tank_2(level, max_height):
         "LEFT": CENTER_HORIZONTAL + 25,
         "TOP": 75,
         "WIDTH": 150,
-        "HEIGHT": max_height*10,
+        "HEIGHT": max_height*1000,
         "FILL_COLOUR": BLUE,
         "OUTLINE_COLOUR": WHITE,
         "BORDER_WIDTH": 3,
-        "LEVEL": level*10
+        "LEVEL": level*1000
     }
     return tank_2_params
 
