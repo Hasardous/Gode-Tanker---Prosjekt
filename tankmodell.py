@@ -17,7 +17,7 @@ max_h2 = 0.265
 A_hull1 = math.pi * 0.005 **2
 A_hull2 = math.pi * 0.005 **2
 g = 9.81
-q_inn_1 = 0.000107 #TODO Få faktisk verdi. Dummyverdi
+q_inn_1 = 0.00005 #bruker 20 sek på en liter
 C = 0.50 #TODO Default 0.61 
 k = C * math.sqrt(2*g)
 d_t = 1 #[default=0.01 eller 0.1]
