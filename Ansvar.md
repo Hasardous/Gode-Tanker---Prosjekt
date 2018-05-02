@@ -5,7 +5,7 @@ Ansvar | Person
 Ansvarsdeligeringsansvarlig | Bendiksen
 Borr- og bøtteansvarlig | Hofstein og Arnesen
 Medieansvarlig | Bendiksen
-Excelansvarlig | Bendiksen
+Spreadsheetsansvarlig | Bendiksen
 Manuelinntastningsansvarlig | Bendiksen
 Vise manuelinntastningsansvarlig | Bamle
 Målingsansvarlig | Bamle
@@ -21,4 +21,7 @@ Animasjonsansvarlig | Bamle
 Matematisk modellansvarlig | Hofstein
 Vannhastighetsmålingsansvarlig | Hofstein og Bendiksen
 Githubansvarlig | Bamle
-Oversiktsansvarlig | Hofsteint
+Oversiktsansvarlig | Hofstein
+Timeransvarlig | Bendiksen
+Dreneringsansvarlig |  Christiansen
+Sikkerhetsansvarlig | Hofstein
