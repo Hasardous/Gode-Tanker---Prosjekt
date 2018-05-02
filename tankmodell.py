@@ -4,7 +4,7 @@
 
 import matplotlib.pyplot as plt
 import math
-import animasjon
+#import animasjon
 
 # Variabler
 
@@ -18,14 +18,14 @@ A_hull1 = math.pi * 0.005 **2
 A_hull2 = math.pi * 0.005 **2
 g = 9.81
 q_inn_1 = 0.00005 #bruker 20 sek på en liter
-C = 0.50 #TODO Default 0.61 
+C = 0.60 #TODO Default 0.61 
 k = C * math.sqrt(2*g)
 d_t = 1 #[default=0.01 eller 0.1]
 min_h = 0.001
 max_t = 1000 #480
 
 # Dynamisk Skjermstørelse
-animasjon.screen_size(max_h1, max_h2)
+#animasjon.screen_size(max_h1, max_h2)
 
 # Initialverdier
 
@@ -73,7 +73,7 @@ while h_1 > min_h and h_2 > min_h and t < max_t and h_1 < max_h1 and h_2 < max_h
   
   # Animasjon
   
-  animasjon.main_loop(max_h1, max_h2, t, h_1, h_2)
+  #animasjon.main_loop(max_h1, max_h2, t, h_1, h_2)
   
   t += d_t
 # Plotting
