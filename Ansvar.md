@@ -25,3 +25,4 @@ Oversiktsansvarlig | Hofstein
 Timeransvarlig | Bendiksen
 Dreneringsansvarlig |  Christiansen
 Sikkerhetsansvarlig | Hofstein
+Jupyter Notebookansvarlig |
