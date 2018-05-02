@@ -9,3 +9,6 @@ Animasjon | animasjon.py
 Simulering | tankmodell.py
 Video |
 Dokumetasjonsnotebook | Dokumentasjon av Gode Tanker.ipynb
+Regneark med data | [Regneark.md](https://docs.google.com/spreadsheets/d/1uYtPzY5EYXYi8S5p26fMOPy4vlK_8ObMASx2nllCtKA/edit#gid=0) 
+Anvsarsfordeling | Ansvar.md
+Formelmappe | Formler
