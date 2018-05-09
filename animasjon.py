@@ -56,13 +56,13 @@ def tank_2(level, max_height):
         "LEVEL": level*1000
     }
     return tank_2_params
-
+#Hoveloop som kjøres via tankmodellen
 def main_loop(max_h_1, max_h_2, t, level_1, level_2):
     '''Animasjon av tanker. Kjører resten av animeringen via funksjoner'''
     #Lager en sort skjerm
     screen.fill(BLACK)
 
-    #Passer på at PyGame ikke kræsjer når du lukker den.
+    #Passer på at PyGame ikke krasjer når du lukker den.
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             sys.exit()
