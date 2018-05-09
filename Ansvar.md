@@ -25,6 +25,6 @@ Oversiktsansvarlig | Hofstein
 Timeransvarlig | Bendiksen
 Dreneringsansvarlig |  Christiansen
 Sikkerhetsansvarlig | Hofstein
-**Nye Ansvar** | **Person**
+**Udeligerte ansvar** | **Person**
 Jupyter Notebookansvarlig | ______
 Sammenligningsansvarlig  | _______
