@@ -28,3 +28,4 @@ Sammenligningsansvarlig  | Hofstein og Arnesen
 Estetikkansvarlig | Bendiksen
 Ansvarsanalytikeransvarlig | Bamle og Bendiksen
 Fremgangsmåteansvarlig | Hofstein
+Innledningsansvarlig | Arnesen
