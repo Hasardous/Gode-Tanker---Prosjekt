@@ -7,7 +7,7 @@ Borr- og bøtteansvarlig | Hofstein og Arnesen
 Medieansvarlig | Bendiksen
 Spreadsheetsansvarlig | Bendiksen
 Manuelinntastningsansvarlig | Bendiksen
-Vise manuelinntastningsansvarlig | Bamle
+Visemanuelinntastningsansvarlig | Bamle
 Målingsansvarlig | Bamle
 Digitalmålingsanvsarlig | Bamle
 Manuelmålingsansvarlig | Arnesen
@@ -15,7 +15,7 @@ Vise manuelmålingsansvarlig | Hofstein
 Toppbøtteansvarlig | Hofstein
 Bunnbøtteansvarlig | Arnesen
 Dataansvarlig | Bamle
-Vise Dataansvarlig | Bendiksen
+ViseDataansvarlig | Bendiksen
 Tankmodellansvarlig | Arnesen
 Animasjonsansvarlig | Bamle
 Matematisk modellansvarlig | Hofstein
