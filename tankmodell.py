@@ -18,11 +18,11 @@ A_hull1 = math.pi * 0.005 **2 # Arealet av hullet i bøtte 1 [m^2]
 A_hull2 = math.pi * 0.005 **2 # Arealet av hullet i bøtte 2 [m^2]
 g = 9.81 # Gravitasjonens akselerasjon [m/s]
 q_inn_1 = 0.00005 # Bruker 20 sek på en liter
-C = 0.60 
-k = C * math.sqrt(2*g)
+C = 0.60 # Korreksjonsfaktor
+k = C * math.sqrt(2*g) 
 d_t = 1
-min_h = 0.001
-max_t = 500
+min_h = 0.001 # Minste vannhøyde før modellen stopper
+max_t = 500 # Lengste tid modellen vil vare [s]
 
 # Dynamisk Skjermstørelse
 
@@ -30,10 +30,10 @@ animasjon.screen_size(max_h1, max_h2)
 
 # Initialverdier
 
-h_1 = 0.15 
-h_2 = 0.10 
-q_inn_2 = 0.0
-t = 0
+h_1 = 0.15 # Vannhøyde i bøtte 1 v/start [m]
+h_2 = 0.10 # Vannhøyde i bøtte 2 v/start [m]
+q_inn_2 = 0.0 # Vannstrøm inn i bøtte 2 v/start
+t = 0 # Starttid
 
 # Modell
 
