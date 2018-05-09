@@ -27,3 +27,4 @@ Dreneringsansvarlig |  Christiansen
 Sikkerhetsansvarlig | Hofstein
 Dokumentasjonsansvarlig | Bamle
 Sammenligningsansvarlig  | Hofstein og Arnesen
+Estetikkansvarlig | Bendiksen
