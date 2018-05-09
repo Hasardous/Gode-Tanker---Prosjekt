@@ -8,21 +8,21 @@ import animasjon
 
 # Variabler
 
-r_1 = 0.11825
-r_2 = 0.11825
-A_T1 = 0.0439
-A_T2 = 0.0439
-max_h1 = 0.265 
-max_h2 = 0.265
-A_hull1 = math.pi * 0.005 **2
-A_hull2 = math.pi * 0.005 **2
-g = 9.81
-q_inn_1 = 0.00005 #bruker 20 sek på en liter
-C = 0.60 #TODO Default 0.61 
+r_1 = 0.11825 # Radius av bøtte 1 [m]
+r_2 = 0.11825 # Radius av bøtte 2 [m]
+A_T1 = 0.0439 # Arealet av tverrsnittet i bøtte 1 [m^2]
+A_T2 = 0.0439 # Arealet av tverrsnittet i bøtte 2 [m^2]
+max_h1 = 0.265 # Høyeste tillatte vannhøyde i bøtte 1 [m] 
+max_h2 = 0.265 # Høyeste tillatte vannhøyde i bøtte 2 [m]
+A_hull1 = math.pi * 0.005 **2 # Arealet av hullet i bøtte 1 [m^2]
+A_hull2 = math.pi * 0.005 **2 # Arealet av hullet i bøtte 2 [m^2]
+g = 9.81 # Gravitasjonens akselerasjon [m/s]
+q_inn_1 = 0.00005 # Bruker 20 sek på en liter
+C = 0.60 
 k = C * math.sqrt(2*g)
-d_t = 1 #[default=0.01 eller 0.1]
+d_t = 1
 min_h = 0.001
-max_t = 1000 #480
+max_t = 500
 
 # Dynamisk Skjermstørelse
 
@@ -30,8 +30,8 @@ animasjon.screen_size(max_h1, max_h2)
 
 # Initialverdier
 
-h_1 = 0.15 #TODO
-h_2 = 0.10 #TODO
+h_1 = 0.15 
+h_2 = 0.10 
 q_inn_2 = 0.0
 t = 0
 
@@ -71,10 +71,10 @@ while h_1 > min_h and h_2 > min_h and t < max_t and h_1 < max_h1 and h_2 < max_h
   h1_hist.append(h_1)
   h2_hist.append(h_2)
   
-# Animasjon
-  
-animasjon.main_loop(max_h1, max_h2, t, h_1, h_2)
-t += d_t
+  # Animasjon
+    
+  animasjon.main_loop(max_h1, max_h2, t, h_1, h_2)
+  t += d_t
 
 # Plotting
 
