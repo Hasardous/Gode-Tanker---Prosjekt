@@ -4,7 +4,7 @@
 
 import matplotlib.pyplot as plt
 import math
-#import animasjon
+import animasjon
 
 # Variabler
 
@@ -25,7 +25,8 @@ min_h = 0.001
 max_t = 1000 #480
 
 # Dynamisk Skjermstørelse
-#animasjon.screen_size(max_h1, max_h2)
+
+animasjon.screen_size(max_h1, max_h2)
 
 # Initialverdier
 
@@ -70,12 +71,11 @@ while h_1 > min_h and h_2 > min_h and t < max_t and h_1 < max_h1 and h_2 < max_h
   h1_hist.append(h_1)
   h2_hist.append(h_2)
   
+# Animasjon
   
-  # Animasjon
-  
-  #animasjon.main_loop(max_h1, max_h2, t, h_1, h_2)
-  
-  t += d_t
+animasjon.main_loop(max_h1, max_h2, t, h_1, h_2)
+t += d_t
+
 # Plotting
 
 plt.plot(t_hist, h1_hist, label='Tank 1')
