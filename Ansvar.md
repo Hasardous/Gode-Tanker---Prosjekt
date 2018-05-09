@@ -21,10 +21,8 @@ Animasjonsansvarlig | Bamle
 Matematisk modellansvarlig | Hofstein
 Vannhastighetsmålingsansvarlig | Hofstein og Bendiksen
 Githubansvarlig | Bamle
-Oversiktsansvarlig | Hofstein
 Timeransvarlig | Bendiksen
 Dreneringsansvarlig |  Christiansen
-Sikkerhetsansvarlig | Hofstein
 Dokumentasjonsansvarlig | Bamle
 Sammenligningsansvarlig  | Hofstein og Arnesen
 Estetikkansvarlig | Bendiksen
