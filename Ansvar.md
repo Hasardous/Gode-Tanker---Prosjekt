@@ -26,4 +26,4 @@ Timeransvarlig | Bendiksen
 Dreneringsansvarlig |  Christiansen
 Sikkerhetsansvarlig | Hofstein
 Dokumentasjonsansvarlig | Bamle
-Sammenligningsansvarlig  | Hofstein
+Sammenligningsansvarlig  | Hofstein og Arnesen
