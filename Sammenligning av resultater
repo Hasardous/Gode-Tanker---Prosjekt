@@ -1,3 +1,16 @@
-Det ble utførte to forsøk. Det første forsøket ble gjennomført før teipen som var rundt hullene ble tatt av. Dette førte til at målingene 
-ikke stemte overens med simuleringen. Det ble gjort et nytt forsøk, men denne gangen uten teip. Dette viste seg å være den største 
-feilkilden i forsøket, siden målingne nå stemte godt overens med simuleringen.
+
+Resultat:
+Det ble utført to forsøk. På det første forsøket var det fortsatt gaffateip rundt hullene i bøttene, og resultatet var at forsøket ikke 
+stemte overens med datamodellen. Vannstrømmen ut ble mye mindre enn datamodellen forutså, slik at bøttene fylte seg.
+
+På det andre forsøket fulgte resultatene dataene fra modellen ganske presist. 
+
+Flere forsøk ble gjort før de to over, med digitalt måleutstyr. Det digitale måleutstyret viste seg å fungere dårlig, og derfor ble det
+brukt manuell måling istedenfor.
+
+Feilkilder:
+- På det første forsøket var det gaffateip rundt hullene i bøttene, og det førte til at vannstrømmen ut av bøttene ikke stemte med 
+  datamodellen. Dette ble korigert i det andre forsøket.
+- Med manuell måling er det større rom for feilmåling, og kan regnes som en feilkilde.
+- Dårlig kommunikasjon kan ha ført til unøyaktige målinger.
+- Vannhastighet kan ha variert i løpet av forsøkene.
