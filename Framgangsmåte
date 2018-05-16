@@ -1,3 +1,7 @@
+Forberedelser:
+  I forkant av selve byggingen av systemet ble det laget et pythonprogram som simulerte forsøket. Det ble også utarbeidet en visualisering 
+  av forsøket i form av en animasjon som også ble kodet i python.
+  
 Borring:
   Det ble boret hull i bøttene. Det ble valgt et bor med diameter på 10 mm, og dette ble brukt på begge. 
   For å kontrollere at oppgitt verdi på boret stemte, brukte vi et skyvelære. Dette for å få riktig verdi i modellen. 
@@ -10,7 +14,14 @@ Vannhastighet:
 
 Oppsett:
   Den ene bøtta ble plassert over den andre slik at utstrømmen av denne skulle bli innstrøm i den andre bøtta. Bøttene ble så fylt opp til
-  startverdiene som var 15 cm i toppbøtta og 10 cm i bunnbøtta.
+  startverdiene som var 15 cm i toppbøtta og 10 cm i bunnbøtta. Hullene ble blokkert frem til forsøket skulle starte.
   
 Gjennomføring av forsøk:
-  Forsøket ble startet 
+  Stoppeklokken ble startet i det vannet begynte å renne ut av hullene i bøttene. Det ble målt høyde på vannet i begge bøttene manuelt. 
+  Målingene ble utført ved at det ble plassert to målestokker i begge bøttene. Vannivået ble så avlest hvert tiende sekund. Dette ble
+  gjenntatt i 11 minutter og 40 sekunder (700 sekunder). Da hadde vannivåene i begge bøttene stabilisert seg. 
+  
+Opprydding:
+  Etter endt forsøk ble vannet i bøttene hellt ut, og utstyret ble samlet sammen, tørket av og lagt på plass. Vannet som ble griset 
+  underveis ble tørket opp.
+  
