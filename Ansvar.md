@@ -29,3 +29,5 @@ Estetikkansvarlig | Bendiksen
 Ansvarsanalytikeransvarlig | Bamle og Bendiksen
 Fremgangsmåteansvarlig | Hofstein
 Innledningsansvarlig | Arnesen
+Ansvarspoengdelingsansvarlig | Bamle og Bendiksen
+Viseansvarsdeligeringsansvarlig | Bamle
