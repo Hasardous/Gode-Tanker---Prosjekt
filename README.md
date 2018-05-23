@@ -10,5 +10,5 @@ Video | [Lenke](https://drive.google.com/open?id=1jeWUS-gadqclRIw9K4WKhRFlfn-3L6
 Dokumetasjonsnotebook | Dokumentasjon av Gode Tanker.ipynb
 Regneark med data | [Lenke](https://docs.google.com/spreadsheets/d/1uYtPzY5EYXYi8S5p26fMOPy4vlK_8ObMASx2nllCtKA/edit#gid=0) 
 Anvsarsfordeling | Ansvar.md
-Formelmappe | Formler
+Bilder brukt i dokumentasjon | Bilder
 Individuelle tekster | Deltekster
