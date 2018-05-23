@@ -24,7 +24,7 @@ Githubansvarlig | Bamle
 Timeransvarlig | Bendiksen
 Dreneringsansvarlig |  Christiansen
 Dokumentasjonsansvarlig | Bamle
-Sammenligningsansvarlig  | Hofstein og Arnesen
+Sammenligningsansvarlig  | Arnesen
 Estetikkansvarlig | Bendiksen
 Ansvarsanalytikeransvarlig | Bamle og Bendiksen
 Fremgangsmåteansvarlig | Hofstein
