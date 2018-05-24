@@ -23,7 +23,7 @@ def screen_size(t1_h, t2_h):
     CENTER_HORIZONTAL = WIDTH // 2
     screen = pygame.display.set_mode(SIZE)
 
-# Clock og en font
+# Klokke og en font
 FPS = 60
 clock = pygame.time.Clock()
 TIMER_FONT = pygame.font.SysFont('Consolas', 30)
@@ -56,7 +56,7 @@ def tank_2(level, max_height):
         "LEVEL": level*1000
     }
     return tank_2_params
-#Hoveloop som kjøres via tankmodellen
+# Hovedloop som kjøres via tankmodellen
 def main_loop(max_h_1, max_h_2, t, level_1, level_2):
     '''Animasjon av tanker. Kjører resten av animeringen via funksjoner'''
     #Lager en sort skjerm
